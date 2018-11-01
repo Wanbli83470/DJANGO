@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>La truffe noire du chien</title>
+</head>
+<body>
+	<h1>La truffe noire du chien</h1>
+
+	<h2>Les attributs d'un Chien :</h2>
+		{% for post in posts%}
+			<h3>{{ post.title }}</h3>
+			<p>{{ post.body }}</p>
+			<hr>
+		{%endfor%}
+	<h2>Dans la vie d'un chien</h2>
+		{% for post2 in posts2%}
+			<h3>{{ post2.title }}</h3>
+			<p>{{ post2.body }}</p>
+			<hr>
+		{%empty%}
+			<p>Sorry, wouf !</p>
+		{%endfor%}
+
+</body>
+</html>
