@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>La truffe noire du chien</title>
-</head>
-<body>
+{% extends 'layouts/base.html' %}
+
+{% block content %}
 	<h1>La truffe noire du chien</h1>
 
-	<h2>Les attributs d'un Chien :</h2>
+	<h2>Les attributs d'un chien : {{posts|length}}</h2>
 		{% for post in posts%}
-			<h3>{{ post.title }}</h3>
-			<p>{{ post.body }}</p>
+			<h3> <a href="/truffe/posts/{{post.id}}">{{ post.title|upper }}</a></h3>
+			<p>{{ post.body|truncatewords:5 }}</p>
+			<p><a href="/truffe/posts/{{post.id}}">Lire la suite</a></p>
 			<hr>
 		{%endfor%}
 	<h2>Dans la vie d'un chien</h2>
@@ -21,5 +19,4 @@
 			<p>Sorry, wouf !</p>
 		{%endfor%}
 
-</body>
-</html>
+ {% endblock %}

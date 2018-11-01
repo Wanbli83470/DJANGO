@@ -25,7 +25,7 @@ SECRET_KEY = '&9!mz!eg@yz5fl4z%yslm+-mh!*tr4v@axpw)rrv2&twjym67d'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'truffe'
+    'truffe.apps.TruffeConfig'
 ]
 
 MIDDLEWARE = [
